@@ -17,6 +17,7 @@ export const ImageContainer = styled.div`
   position: relative;
   background: url('/side_image.png');
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 
   ::after {
@@ -29,14 +30,42 @@ export const ImageContainer = styled.div`
     background-image: linear-gradient(180deg, #130525 0%, rgba(105, 57, 153, 0) 100%);
     transform: rotate(-180deg);
   }
+
+  @media (max-width: 1220px) {
+    width: 55%;
+  }
+
+  @media (max-width: 1050px) {
+    width: 50%;
+  }
+
+  @media (max-width: 700px) {
+    width: 45%;
+  }
 `;
 
 export const LoginContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 80px;
+  margin-left: 120px;
   width: 18%;
+
+  @media (max-width: 1220px) {
+    width: 22%;
+    margin-left: 100px;
+  }
+
+  @media (max-width: 1050px) {
+    width: 35%;
+    margin-left: 50px;
+  }
+
+  @media (max-width: 700px) {
+    width: 50%;
+    margin-left: 15px;
+  }
+
 `;
 
 export const Title = styled.p`
