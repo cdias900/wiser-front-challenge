@@ -1,9 +1,5 @@
 import styled from 'styled-components';
 
-interface Props {
-  margin?: boolean;
-}
-
 export const Container = styled.div`
   background: #FAF5FF;
   height: 100vh;
@@ -68,46 +64,9 @@ export const LoginContainer = styled.div`
 
 `;
 
-export const Title = styled.p`
-  font-style: normal;
-  line-height: 48px;
-  font-weight: 400;
-  color: #383E71;
-  font-size: 40px;
-  margin-bottom: ${(props: Props) => (props.margin ? '16px' : 'unset')};
-`;
-
-export const SubTitle = styled.p`
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 20px;
-  color: #989FDB;
-  margin-bottom: ${(props: Props) => (props.margin ? '24px' : 'unset')};
-`;
-
 export const LoginForm = styled.form`
   display: flex;
   flex-direction: column;
-`;
-
-export const Label = styled.label`
-  padding: 0 10px;
-  margin: 24px 0 8px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 10px;
-`;
-
-export const Input = styled.input`
-  border: 1px solid #989FDB;
-  border-radius: 8px;
-  padding: 16px;
-  background: transparent;
-
-  ::placeholder {
-    color: #989FDB;
-  }
 `;
 
 export const Button = styled.button`
@@ -125,25 +84,13 @@ export const Button = styled.button`
   border: none;
   margin: 32px 0;
   cursor: pointer;
+  transition: all .2s;
 
   :active {
-    opacity: 0.5;
+    opacity: 0.7;
   }
-`;
 
-export const Text = styled.p`
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-  text-align: center;
-  color: #989FDB;
-`;
-
-export const LinkText = styled.a`
-  color: #972ea8;
-
-  :active {
-    opacity: 0.5;
+  :hover {
+    filter: brightness(.85);
   }
 `;
